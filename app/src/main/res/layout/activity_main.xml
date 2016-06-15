@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/weather_icon_imageView"
+        android:src="@drawable/na"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -22,8 +23,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/temperture"
         android:id="@+id/temperture_text"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/weather_icon_imageView"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:typeface="serif" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,8 +34,8 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/condition"
         android:id="@+id/condition_text"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/temperture_text" />
+        android:layout_below="@+id/temperture_text"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,7 +44,8 @@
         android:text="@string/Location"
         android:id="@+id/textView3"
         android:layout_below="@+id/condition_text"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
 
     <ImageView
         android:layout_width="wrap_content"
