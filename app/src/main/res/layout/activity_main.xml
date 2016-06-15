@@ -9,8 +9,48 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="matrial.aka.weather.MainActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weather_icon_imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/temperture"
+        android:id="@+id/temperture_text"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/condition"
+        android:id="@+id/condition_text"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/temperture_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Location"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/condition_text"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/yahoo_logo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/temperture_text"
+        android:layout_alignStart="@+id/temperture_text" />
+
+
 </RelativeLayout>
