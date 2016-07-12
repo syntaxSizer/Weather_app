@@ -7,5 +7,5 @@ import org.json.JSONObject;
  */
 public interface JsonPopulator {
 
-     void poupolute(JSONObject jsonObject);
+     void populate(JSONObject data);
 }

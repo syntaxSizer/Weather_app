@@ -8,17 +8,17 @@ import org.json.JSONObject;
 public class Units implements JsonPopulator {
 
 
-    private String temperture;
+    private String temperature;
 
     @Override
-    public void poupolute(JSONObject jsonObject) {
-        temperture = jsonObject.optString("temperture");
+    public void populate(JSONObject data) {
+        temperature = data.optString("temperature");
 
     }
 
 
-    public String getTemperture() {
-        return temperture;
+    public String getTemperature() {
+        return temperature;
     }
 }
 

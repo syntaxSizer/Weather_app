@@ -9,15 +9,15 @@ public class Condition implements  JsonPopulator {
 
 
     private int code;
-    private int temperture;
+    private int temperature;
     private String description;
 
     @Override
-    public void poupolute(JSONObject jsonObject) {
+    public void populate(JSONObject data) {
 
-        code = jsonObject.optInt("code");
-        temperture = jsonObject.optInt("tem");
-        description = jsonObject.optString("text");
+        code = data.optInt("code");
+        temperature = data.optInt("temp");
+        description = data.optString("text");
     }
 
     public String getDescription() {
@@ -28,8 +28,8 @@ public class Condition implements  JsonPopulator {
         return code;
     }
 
-    public int getTemperture() {
-        return temperture;
+    public int getTemperature() {
+        return temperature;
     }
 }
 
