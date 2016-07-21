@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements YahooWeatherCallB
 
 
         service = new YahooWeatherService(this);
-        service.refershWeather("Austin , TX");
+        service.refershWeather("Nairobi , Kenya");
 
 
 
