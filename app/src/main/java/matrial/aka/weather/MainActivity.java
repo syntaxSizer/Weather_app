@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements YahooWeatherCallB
 
     private YahooWeatherService service;
     private ProgressDialog dialog;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,21 +33,27 @@ public class MainActivity extends AppCompatActivity implements YahooWeatherCallB
         temperature = (TextView)findViewById(R.id.temperature_text);
         conditionTextView = (TextView)findViewById(R.id.condition_text);
         locationTextView =(TextView)findViewById(R.id.location_TextView);
+
+
         service = new YahooWeatherService(this);
+        service.refershWeather("Austin , TX");
+
+
+
         dialog = new ProgressDialog(this);
         dialog.setMessage("Loading...");
         dialog.show();
 
 
-        service.refershWeather("Austin , TX");
 
     }
+    @SuppressWarnings("deprecation")
     @Override
     public void serviceSuccess(Channel channel){
         dialog.hide();
 
         Item item = channel.getItem();
-        int resourceId = getResources().getIdentifier("drawable/icon_" + item.getCondition().getCode(),null,getPackageName());
+        int resourceId = getResources().getIdentifier("drawable/icon_"+ item.getCondition().getCode(),null,getPackageName());
         Drawable weatherIconDrawable = getResources().getDrawable(resourceId);
         weatherImageView.setImageDrawable(weatherIconDrawable);
         locationTextView.setText(service.getLocation());

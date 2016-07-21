@@ -5,7 +5,7 @@ import org.json.JSONObject;
 /**
  * Created by geckozila on 15/06/16.
  */
-public class Condition implements  JsonPopulator {
+public class Condition implements JsonPopulator {
 
 
     private int code;

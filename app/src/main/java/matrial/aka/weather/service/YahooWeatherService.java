@@ -37,21 +37,21 @@ public class YahooWeatherService {
             protected String doInBackground(String... params) {
 
 
-                   String YQL = String.format("select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"%s\")"), location;
+                String YQL = String.format("select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"%s\")", location);
                 String endpoint = String.format("https://query.yahooapis.com/v1/public/yql?q=%s&format=json", Uri.encode(YQL));
                 try {
                     URL url = new URL(endpoint);
                     URLConnection connection= url.openConnection();
                     InputStream inputStream = connection.getInputStream();
-                    BufferedReader reder = new BufferedReader(new InputStreamReader(inputStream));
-                    StringBuilder result = new StringBuilder();
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+                    StringBuilder results = new StringBuilder();
                     String line;
 
-                    while ((line = reder.readLine()) != null){
-                        result.append(line);
+                    while ((line = reader.readLine()) != null){
+                        results.append(line);
 
                     }
-                    return  result.toString();
+                    return  results.toString();
 
                 } catch (Exception e) {
                     error = e;
@@ -75,7 +75,7 @@ public class YahooWeatherService {
                     }
 
                     Channel channel = new Channel();
-                    channel.populate(queryresualt.optJSONObject("result").optJSONObject("channel"));
+                    channel.populate(queryresualt.optJSONObject("results").optJSONObject("channel"));
 
                     callBack.serviceSuccess(channel);
 

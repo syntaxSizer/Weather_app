@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Weather</string>
+    <string name="app_name"> WHETHER</string>
     <string name="temperture">Tempearture</string>
     <string name="condition">Condition</string>
     <string name="Location">Location</string>
