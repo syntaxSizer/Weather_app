@@ -57,8 +57,8 @@
         android:id="@+id/imageView"
         android:src="@drawable/yahoo_logo"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/temperature_text"
-        android:layout_alignStart="@+id/temperature_text" />
+        android:layout_alignLeft="@+id/condition_text"
+        android:layout_alignStart="@+id/condition_text" />
 
 
 </RelativeLayout>
